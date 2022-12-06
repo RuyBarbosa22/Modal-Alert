@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal&Alert</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <label for="alerta">Escolha uma métrica:</label>
+    <br>
+    <select  onchange="teste2()" name="alerta" id="alerts">
+        <option value="med">médio</option>
+        <option value="alt">Alto</option>
+        <option value="crit">Crítico</option>
+    </select>
+    <br>
+    <button id="myBtn" class="btn">Exibir modal</button>
+    <br>
+    <button onclick="teste()" class="btn">Exibir alerta</button>
+    <br>
+    <p>O alerta muda deacordo com a métrica selecionada.</p>
+
+    <div id="myModal" class="modal" style="display: none; position: absolute; top: 25%; transform: translateX(17%); ">
+        <!--Pré-definindo que o modal é oculta-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="divBtn">
+                    <button class="close">&times;</button>
+                </div>
+                <div class="title">
+                    <b>
+                        <h2>Código da empresa</h2>
+                    </b>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>${variavel com codEmpresa}</p>
+                <p>Esse é um token especial para sua empresa! Guarde-o pois será importante para acessar outras
+                    funcionalidades.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script>
+    let cor
+
+    function teste2() {
+        cores = document.getElementById("alerts");
+        if(cores.value == "med") {
+            cor = "#F1C40F"
+        } else if (cores.value == "alt") {
+            cor = "#D35400"
+        } else if (cores.value == "crit") {
+            cor = "#C0392B"
+        }
+    }
+
+    function teste() {
+
+        Toastify({
+            text: "This is a toast",
+            className: "btn",
+            style: {
+                background: `${cor}`,
+            }
+        }).showToast();
+    }
+</script>
+
+</html>

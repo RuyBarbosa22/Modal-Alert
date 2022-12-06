@@ -1,0 +1,76 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    padding: 5%;
+    background-color: #272727;
+    color: whitesmoke;
+}
+
+.btn {
+    width: 140px;
+    height: 30px;
+    background-color: blueviolet;
+    color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 2%;
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    color: #272727;
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.close {
+    width: 40px;
+    margin-left: 1%;
+    margin-top: 1%;
+    height: 40px;
+    font-size: 22px;
+}
+.title {
+    margin-left: 10px;
+    display: flex;
+    justify-content: left;
+    background-color: blueviolet;
+}
+.divBtn {
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
